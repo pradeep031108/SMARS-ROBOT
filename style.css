@@ -1,0 +1,104 @@
+body {
+margin: 0;
+background: #000;
+color: white;
+overflow: hidden;
+font-family: sans-serif;
+}
+
+/* ROTATE SCREEN */
+#rotate {
+position: fixed;
+width: 100%;
+height: 100%;
+background: black;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 22px;
+z-index: 999;
+}
+
+@media (orientation: landscape) {
+#rotate { display: none; }
+}
+
+/* APP */
+#app {
+width: 100vw;
+height: 100vh;
+position: relative;
+}
+
+/* TOP BAR */
+.top {
+position: absolute;
+top: 0;
+width: 100%;
+height: 50px;
+display: flex;
+justify-content: space-between;
+padding: 10px;
+background: #111;
+}
+
+/* JOYSTICK (LEFT THUMB AREA) */
+.joystick {
+position: absolute;
+bottom: 8%;
+left: 5%;
+width: 180px;
+height: 180px;
+background: radial-gradient(circle, #333, #000);
+border-radius: 50%;
+}
+
+.stick {
+width: 70px;
+height: 70px;
+background: #00ffcc;
+border-radius: 50%;
+position: absolute;
+top: 55px;
+left: 55px;
+}
+
+/* CONTROLS (RIGHT THUMB AREA) */
+.controls {
+position: absolute;
+bottom: 8%;
+right: 5%;
+width: 220px;
+height: 220px;
+}
+
+/* BUTTONS BASE */
+.btn {
+position: absolute;
+width: 60px;
+height: 60px;
+border-radius: 15px;
+border: none;
+font-size: 22px;
+background: #00ffcc;
+}
+
+/* POSITIONING LIKE GAME PAD */
+.up    { top: 0; left: 80px; }
+.down  { bottom: 0; left: 80px; }
+.left  { left: 0; top: 80px; }
+.right { right: 0; top: 80px; }
+.stop  { top: 80px; left: 80px; background: red; }
+
+/* MODE */
+.mode {
+position: absolute;
+bottom: -60px;
+width: 100%;
+display: flex;
+justify-content: space-around;
+}
+
+button:active {
+transform: scale(1.2);
+}

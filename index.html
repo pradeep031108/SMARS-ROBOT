@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>SMARS Controller</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="rotate">Rotate to landscape</div>
+
+<div id="app">
+
+  <!-- TOP INFO -->
+
+  <div class="top">
+    <button onclick="connect()">Connect</button>
+    <span id="status">❌</span>
+    <span id="distance">--</span>
+  </div>
+
+  <!-- LEFT JOYSTICK -->
+
+  <div class="joystick" id="joystick">
+    <div class="stick" id="stick"></div>
+  </div>
+
+  <!-- RIGHT BUTTONS -->
+
+  <div class="controls">
+
+```
+<button class="btn up" onclick="press('F')">▲</button>
+
+<button class="btn left" onclick="press('L')">◀</button>
+<button class="btn stop" onclick="press('S')">■</button>
+<button class="btn right" onclick="press('R')">▶</button>
+
+<button class="btn down" onclick="press('B')">▼</button>
+
+<div class="mode">
+  <button onclick="send('M')">M</button>
+  <button onclick="send('O')">O</button>
+</div>
+```
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
